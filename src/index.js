@@ -12,6 +12,7 @@ import pluginFlexbox from 'grapesjs-blocks-flexbox';
 import pluginSocial from 'grapesjs-plugin-social';
 import pluginIFrame from 'grapesjs-plugin-iframe';
 
+
 import commands from './commands';
 import blocks from './blocks';
 import components from './components';
@@ -120,8 +121,6 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
     //grapesjs-plugin-iframe
 
     iFrameOpts:{}
-
-
   };
 
   // Load defaults
@@ -158,7 +157,6 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   flexBoxOpts && pluginFlexbox(editor,flexBoxOpts);
   socialOpts && pluginSocial(editor,socialOpts)
   iFrameOpts && pluginIFrame(editor,iFrameOpts)
-
   // Load components
   components(editor, config);
 

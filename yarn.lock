@@ -1056,6 +1056,10 @@ circular-json@^0.3.1:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.3.tgz#815c99ea84f6809529d2f45791bdf82711352d66"
 
+ckeditor@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/ckeditor/-/ckeditor-4.10.0.tgz#c0c6d5d059d6c60a669083d8307fe55ec8cd7587"
+
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/class-utils/-/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -2236,6 +2240,10 @@ grapesjs-custom-code@^0.1.1:
 grapesjs-navbar@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/grapesjs-navbar/-/grapesjs-navbar-0.1.5.tgz#62e35eca0f391f94d455e96c206b74b5f495fa6e"
+
+grapesjs-plugin-ckeditor@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/grapesjs-plugin-ckeditor/-/grapesjs-plugin-ckeditor-0.0.9.tgz#230057099ce595409f24d2e11cf4ed345c83a360"
 
 grapesjs-plugin-export@^0.1.5:
   version "0.1.5"
