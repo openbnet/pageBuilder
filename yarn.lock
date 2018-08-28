@@ -2252,6 +2252,10 @@ grapesjs-plugin-forms@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/grapesjs-plugin-forms/-/grapesjs-plugin-forms-0.3.6.tgz#c55ee38ad74e2935e1e279deb0bca45ec0b1d301"
 
+grapesjs-plugin-social@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/grapesjs-plugin-social/-/grapesjs-plugin-social-0.0.8.tgz#a346cbe35d73dc1214589423cc670a882aa1ee82"
+
 handle-thing@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"

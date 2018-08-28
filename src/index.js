@@ -9,6 +9,7 @@ import pluginFilestack from 'grapesjs-plugin-filestack';
 import pluginCustomCode from 'grapesjs-custom-code';
 import pluginBootstrap4 from 'grapesjs-blocks-bootstrap4';
 import pluginFlexbox from 'grapesjs-blocks-flexbox';
+import pluginSocial from 'grapesjs-plugin-social';
 
 import commands from './commands';
 import blocks from './blocks';
@@ -22,7 +23,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
 
   let defaults = {
     // Which blocks to add
-    blocks: ['link-block', 'quote', 'text-basic','grapesjs-custom-code','grapesjs-blocks-bootstrap4'],
+    blocks: ['link-block', 'quote', 'text-basic','grapesjs-custom-code','grapesjs-blocks-bootstrap4','gjs-social'],
 
     // Modal import title
     modalImportTitle: 'Import',
@@ -109,7 +110,11 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
       }
     },
     // grapesjs-blocks-flexbox ops
-    flexBoxOpts: {}
+    flexBoxOpts: {},
+
+    // grapesjs-plugin-social
+
+    socialOpts: {}
 
 
   };
@@ -129,7 +134,9 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
     aviaryOpts,
     filestackOpts,
     customCodeOpts,
-    bootStrap4Opts,flexBoxOpts
+    bootStrap4Opts,
+    flexBoxOpts,
+    socialOpts
   } = config;
 
   // Load plugins
@@ -143,6 +150,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   customCodeOpts && pluginCustomCode(editor, customCodeOpts);
   bootStrap4Opts && pluginBootstrap4(editor, bootStrap4Opts);
   flexBoxOpts && pluginFlexbox(editor,flexBoxOpts);
+  socialOpts && pluginSocial(editor,socialOpts)
 
   // Load components
   components(editor, config);
