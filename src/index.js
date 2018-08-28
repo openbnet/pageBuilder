@@ -7,6 +7,8 @@ import pluginExport from 'grapesjs-plugin-export';
 import pluginAviary from 'grapesjs-aviary';
 import pluginFilestack from 'grapesjs-plugin-filestack';
 import pluginCustomCode from 'grapesjs-custom-code';
+import pluginBootstrap4 from 'grapesjs-blocks-bootstrap4';
+import pluginFlexbox from 'grapesjs-blocks-flexbox';
 
 import commands from './commands';
 import blocks from './blocks';
@@ -15,11 +17,12 @@ import panels from './panels';
 import styles from './styles';
 
 export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) => {
+  
   let config = opts;
 
   let defaults = {
     // Which blocks to add
-    blocks: ['link-block', 'quote', 'text-basic','grapesjs-custom-code'],
+    blocks: ['link-block', 'quote', 'text-basic','grapesjs-custom-code','grapesjs-blocks-bootstrap4'],
 
     // Modal import title
     modalImportTitle: 'Import',
@@ -93,7 +96,22 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
     filestackOpts: 0,
 
     // grapesjs-custom-code plugin options
-    customCodeOpts: {}
+    customCodeOpts: {},
+
+    // grapejs-blocks-bootstrap4 opts
+
+    bootStrap4Opts: {
+      blocks: {
+      },
+      blockCategories: {
+      },
+      labels: {
+      }
+    },
+    // grapesjs-blocks-flexbox ops
+    flexBoxOpts: {}
+
+
   };
 
   // Load defaults
@@ -110,7 +128,8 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
     exportOpts,
     aviaryOpts,
     filestackOpts,
-    customCodeOpts
+    customCodeOpts,
+    bootStrap4Opts,flexBoxOpts
   } = config;
 
   // Load plugins
@@ -122,6 +141,8 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   aviaryOpts && pluginAviary(editor, aviaryOpts);
   filestackOpts && pluginFilestack(editor, filestackOpts);
   customCodeOpts && pluginCustomCode(editor, customCodeOpts);
+  bootStrap4Opts && pluginBootstrap4(editor, bootStrap4Opts);
+  flexBoxOpts && pluginFlexbox(editor,flexBoxOpts);
 
   // Load components
   components(editor, config);
