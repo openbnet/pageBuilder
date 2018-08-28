@@ -6,6 +6,7 @@ import pluginForms from 'grapesjs-plugin-forms';
 import pluginExport from 'grapesjs-plugin-export';
 import pluginAviary from 'grapesjs-aviary';
 import pluginFilestack from 'grapesjs-plugin-filestack';
+import pluginCustomCode from 'grapesjs-custom-code';
 
 import commands from './commands';
 import blocks from './blocks';
@@ -18,7 +19,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
 
   let defaults = {
     // Which blocks to add
-    blocks: ['link-block', 'quote', 'text-basic'],
+    blocks: ['link-block', 'quote', 'text-basic','grapesjs-custom-code'],
 
     // Modal import title
     modalImportTitle: 'Import',
@@ -90,6 +91,9 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
     // Filestack library should be included manually
     // By setting this option to `false` will avoid loading the plugin
     filestackOpts: 0,
+
+    // grapesjs-custom-code plugin options
+    customCodeOpts: {}
   };
 
   // Load defaults
@@ -105,7 +109,8 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
     formsOpts,
     exportOpts,
     aviaryOpts,
-    filestackOpts
+    filestackOpts,
+    customCodeOpts
   } = config;
 
   // Load plugins
@@ -116,6 +121,7 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   exportOpts && pluginExport(editor, exportOpts);
   aviaryOpts && pluginAviary(editor, aviaryOpts);
   filestackOpts && pluginFilestack(editor, filestackOpts);
+  customCodeOpts && pluginCustomCode(editor, customCodeOpts);
 
   // Load components
   components(editor, config);
@@ -132,4 +138,5 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   // Load styles
   styles(editor, config);
 
+ 
 });

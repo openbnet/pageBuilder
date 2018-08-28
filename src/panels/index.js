@@ -115,5 +115,8 @@ export default (editor, config) => {
     if ((!openLayersBtn || !openLayersBtn.get('active')) && editor.getSelected()) {
       openSmBtn && openSmBtn.set('active', 1);
     }
+
+
+    
   });
 }
